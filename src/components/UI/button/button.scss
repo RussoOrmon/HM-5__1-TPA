@@ -1,0 +1,21 @@
+.btn-container{
+    display:flex;
+    flex-wrap:wrap ;
+    justify-content: end;
+    margin:100px 5px;
+
+}
+
+.btn{
+    background-color:#4A026B;
+    //width: 97px;
+    height: 40px;
+    border-radius: 10px;
+    margin: -30px 10px;
+    color: white;
+    text-align: center;
+    padding: 5px 15px ;
+    font-size:  16px;
+    font-weight: 500;
+    line-height: 40px;
+}

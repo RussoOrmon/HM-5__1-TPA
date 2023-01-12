@@ -1,0 +1,67 @@
+.expense-container{
+    width: 748px;
+    height: 104px;
+    border-radius: 12px;
+    background-color: #4B4B4B;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white
+
+}
+.date-block{
+    width: 84px;
+    height: 80px;
+    border-radius: 10px;
+    border:2px solid white;
+    background-color: #2A2A2A;
+    margin: 10px ;
+    
+}
+
+.title-expense{
+    width:550px;
+    height: 104px;
+    border-radius: 12px;
+    margin: auto 10px;
+    display: flex;
+    justify-content:left;
+
+}
+.price-expense{
+    width: 88px;
+    height: 24px;
+    border:2px solid white ;
+    border-radius: 10px;
+    padding: 10px 18px;
+    margin: 25px;
+    background-color: #40005D;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: normal;
+    line-height: 24px;
+}
+.title-filter{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px ;
+
+}
+
+.title-filter label {
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+
+}
+.years-section{
+    width: 124px;
+    height: 43px;
+    border-radius: 6px;
+    margin: 10px 0 0 ;
+    text-align: center;
+    font-size: 18px;
+}
