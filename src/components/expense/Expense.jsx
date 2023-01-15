@@ -1,44 +1,27 @@
-import React from 'react'
-import ExpenseFilter from '../expenseList/ExpenseFilter';
-import ExpenseList from '../expenseList/ExpenseList';
-import Button from '../UI/button/Button';
-import './expense.scss';
+import React from "react";
+import ExpenseFilter from "../expenseList/ExpenseFilter";
+import ExpenseList from "../expenseList/ExpenseList";
+import "./expense.scss";
+import styled from 'styled-components'
 
-const Expense = ({expenses}) => {
-    console.log(expenses);
+const Container=styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const Expense = ({ expenses }) => {
+  //console.log(expenses);
+
   return (
-    <div className='main-container' >
-        <form action='' method='POST'  className='expenses-container'>
-            {/*<h1>Expense</h1>*/}
-            <div className='input-block' >
-                <label htmlFor="title"> Заголовок 
-                    <input type="text" id='title' required />
-                </label>
-                
+    <Container >
+      <div className="filter-block">
+        <ExpenseFilter expenses={expenses} />
+        {expenses.map((item) => (
+          <ExpenseList  key={item.title} item={item} />
+        ))}
+      </div>
+    </Container>
+  );
+};
 
-                <label htmlFor="amount"> Количество 
-                    <input type="text" id='amount' required />
-                </label>
-                
-                
-            </div>
-            <div className='date-input' >
-            <label htmlFor="date"> Дата
-            <input type="date" id='date' required /> </label>
-            </div>
-            <div className='btn-container' > 
-                <Button children="Отмена" />
-                <Button children="Добавить расходы" />
-            
-                 </div>
-        </form>
-        <div className='filter-block' >
-            <ExpenseFilter expenses={expenses} />
-            <ExpenseList expenses={expenses} />
-        </div>
-    
-    </div>
-)
-}
-
-export default Expense
+export default Expense;
